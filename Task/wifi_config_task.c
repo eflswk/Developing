@@ -75,11 +75,11 @@ void WiFiConfigTask_Entry(void *arg) {
 			/* 保存此次的WIFI配置*/
 			W25Q64_SectorErase(USER_ADDR); // 先擦除
 
-			for(int i=0; i<16; i++){
+			for(int i=0; i<20; i++){
 				W25Q64_WriteByte(USER_ADDR + i, WiFiConfigInfo.SSID[i]);
 			}
-			for(int i=0; i<16; i++){
-				W25Q64_WriteByte(USER_ADDR + 16 + i, WiFiConfigInfo.PassWord[i]);
+			for(int i=0; i<20; i++){
+				W25Q64_WriteByte(USER_ADDR + 20 + i, WiFiConfigInfo.PassWord[i]);
 			}
             /* 创建ESP联网、TCP通信任务，优先级为1 */
             BaseType_t   Ret = xTaskCreate(ESPTask_Entry,

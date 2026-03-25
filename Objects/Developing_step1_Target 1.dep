@@ -1438,7 +1438,7 @@ I (.\Task\wifi_config_task.h)(0x69C35708)
 I (.\Task\esp_task.h)(0x69C3C0FE)
 I (.\Task\monitor_task.h)(0x69C3C7CC)
 F (.\Common\global.h)(0x69C3DA4D)()
-F (.\Common\init.c)(0x69C3DAA1)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
+F (.\Common\init.c)(0x69C3E4C2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
 I (Common\init.h)(0x69C33EA0)
 I (Common\common.h)(0x69C3D9E7)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1558,7 +1558,7 @@ I (.\Task\wifi_config_task.h)(0x69C35708)
 I (.\Task\esp_task.h)(0x69C3C0FE)
 I (.\Task\monitor_task.h)(0x69C3C7CC)
 F (.\Task\esp_task.h)(0x69C3C0FE)()
-F (.\Task\wifi_config_task.c)(0x69C3D9E7)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi_config_task.o --omf_browse .\objects\wifi_config_task.crf --depend .\objects\wifi_config_task.d)
+F (.\Task\wifi_config_task.c)(0x69C3E4DC)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi_config_task.o --omf_browse .\objects\wifi_config_task.crf --depend .\objects\wifi_config_task.d)
 I (Task\wifi_config_task.h)(0x69C35708)
 I (.\Common\common.h)(0x69C3D9E7)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)

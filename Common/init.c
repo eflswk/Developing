@@ -27,11 +27,11 @@ void System_Init(void) {
 	W25Q64_SPI1_Init();
 	
 	/* 打印之前配置的WIFI*/
-	for(int i=0; i<16; i++){
+	for(int i=0; i<20; i++){
     WiFiConfigInfo.SSID[i] = W25Q64_ReadByte(USER_ADDR + i);
 }
-	for(int i=0; i<16; i++){
-    WiFiConfigInfo.PassWord[i] = W25Q64_ReadByte(USER_ADDR + 16 + i);
+	for(int i=0; i<20; i++){
+    WiFiConfigInfo.PassWord[i] = W25Q64_ReadByte(USER_ADDR + 20 + i);
 }
 	printf1("This is last WIFI config\r\n");
     printf1("UserID: %s\r\n", WiFiConfigInfo.SSID);
