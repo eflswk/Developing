@@ -1,0 +1,117 @@
+#include "wifi.h"
+
+/*
+ * 文件名：wifi.c
+ * 作  用：
+ *      ESP-01S WiFi 模块驱动实现文件。
+ *
+ *      1. 初始化 ESP-01S 使用的 USART2
+ *      2. 提供基础字符串发送函数
+ *
+ * 说  明：
+ *      1. 本模块只负责 ESP-01S 的底层串口发送
+ *      2. AT 指令的组织与响应处理，不在本模块中完成
+ *      3. ESP 返回数据由 USART2 中断接收后送入消息队列
+ */
+
+/**
+  * @brief  向 ESP-01S 发送一个字节
+  * @param  Byte：要发送的字节
+  * @retval 无
+  * @note   该函数仅在本文件内部使用
+  */
+static void WIFI_SendByte(uint8_t Byte) {
+    /* 等待发送数据寄存器为空 */
+    while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
+
+    USART_SendData(USART2, Byte);
+}
+
+/**
+  * @brief  初始化 ESP-01S 使用的 USART2
+  * @param  无
+  * @retval 无
+  */
+void WIFI_Init(void) {
+
+
+
+
+    /* 开启 GPIOA 时钟 */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
+    /* 开启 USART2 时钟 */
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+
+    /* 配置 PA2 为 USART2_TX */
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    /* 配置 PA3 为 USART2_RX */
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    /* 配置 USART2 串口参数：115200 8N1 */
+    USART_InitTypeDef USART_InitStructure;
+    USART_InitStructure.USART_BaudRate = 115200;
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;
+    USART_InitStructure.USART_Parity = USART_Parity_No;
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+    USART_Init(USART2, &USART_InitStructure);
+
+    /* 开启 USART2 接收中断 */
+    USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
+
+    /* 配置 USART2 中断优先级，当前优先级分组是分组4
+       注意：中断中使用 FreeRTOS 的 FromISR 接口，则优先级不能过高 */
+    NVIC_InitTypeDef NVIC_InitStructure;
+    NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 12;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+
+    /* 使能 USART2 */
+    USART_Cmd(USART2, ENABLE);
+}
+
+/**
+  * @brief  向 ESP-01S 发送一个字符串
+  * @param  Str：要发送的字符串
+  * @retval 无
+  */
+void WIFI_SendString(char *Str) {
+    while (*Str != '\0') {
+        WIFI_SendByte((uint8_t)*Str);
+        Str++;
+    }
+}
+
+/**
+  * @brief  USART2 中断服务函数
+  * @param  无
+  * @retval 无
+  * @note   每收到 ESP 返回的 1 个字节，就送入消息队列
+  */
+void USART2_IRQHandler(void) {
+    if (USART_GetITStatus(USART2, USART_IT_RXNE) == SET) {
+        uint8_t RxData = (uint8_t)USART_ReceiveData(USART2);
+
+        /* 将收到的 1 个字节送入 ESP 接收消息队列 */
+                if (ESP_ATRxQueue != NULL) {
+          BaseType_t  Ret = xQueueSendFromISR(ESP_ATRxQueue, &RxData, NULL);
+
+            if (Ret != pdPASS) {
+                /* 这里只做最简单的错误标记 */
+				printf1("error \r\n");
+                while (1);
+            }
+        }
+    }
+}

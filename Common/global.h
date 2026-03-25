@@ -1,0 +1,64 @@
+/*
+ * 文件名：global.h
+ * 作  用：
+ *      全局变量声明管理文件。
+ *
+ *      1. 统一声明全局变量（extern）
+ *      2. 避免多文件重复定义问题
+ *      3. 提供全局资源访问入口
+ *
+ * 设计原则：
+ *      .h 中只做全局资源声明（extern）
+ *      .c 中才做相关定义
+ */
+
+#ifndef __GLOBAL_H
+#define __GLOBAL_H
+
+#include "common.h"
+
+/* ===================== 全局类型定义 ===================== */
+
+typedef struct {
+    char SSID[20];      /* WiFi名称 */
+    char PassWord[20];  /* WiFi密码 */
+} WiFiConfig_t;
+
+/* ===================== 全局类型定义 ===================== */
+
+
+/* ===================== 全局宏定义 ===================== */
+
+/* 服务端配置 */
+#define SERVER_IP      "8.136.26.114"
+#define SERVER_PORT    9008
+
+/*W25Q64存储地址*/
+#define USER_ADDR  0x000000
+
+/* ===================== 全局宏定义 ===================== */
+
+
+/* ===================== 全局变量仅声明 ===================== */
+
+/* WiFi配置的全局配置区，蓝牙配网完成后需要给此结构体成员赋值 */
+extern WiFiConfig_t WiFiConfigInfo;
+
+/* ===================== 全局变量仅声明 ===================== */
+
+
+/* ===================== FreeRTOS句柄仅声明 ===================== */
+
+/* 任务句柄 */
+extern TaskHandle_t WiFiConfigTaskHandle;    /* WiFi配置任务句柄 */
+extern TaskHandle_t ESPTaskHandle;           /* ESP任务句柄 */
+extern TaskHandle_t MonitorTaskHandle;		/* 监察任务句柄 */
+
+/* 消息队列句柄 */
+extern QueueHandle_t BT_MsgQueue;             /* 蓝牙接收手机端消息队列 */
+extern QueueHandle_t ESP_ATRxQueue;        /* ESP接收AT反馈消息队列 */
+
+/* ===================== FreeRTOS句柄仅声明 ===================== */
+
+
+#endif // !__GLOBAL_H
