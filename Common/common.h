@@ -57,6 +57,8 @@
 #include "buzzer.h"
 #include "leds.h"
 #include "W25Q64.h"
+#include "ADC.h"
+#include "sensor.h"
 /* ===================== 用户模块 ===================== */
 
 

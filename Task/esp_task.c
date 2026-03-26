@@ -221,19 +221,19 @@ void ESPTask_Entry(void *arg) {
     /* HTTP请求报文缓冲区，例如：POST /x HTTP/1.1\r\n\r\nlight=11,temp=21 */
     char HttpBuf[128] = {0};
 
-    int Light = 10;
-    int Temp = 20;
+    float Light = 0;
+    float Temp = 0;
 
     TickType_t LastUploadTime = xTaskGetTickCount();
 
     /* 第七步开始：周期性发送HTTP请求 */
     while (1) {
         /* 构造假传感器数据，每次略微变化 */
-        Light ++;
-        Temp ++;
+        Light = Get_Light_Intensity();
+        Temp = Get_Temperature();
 
         printf1("Build Sensor Data...\r\n");
-        sprintf(BodyBuf, "light=%d,temp=%d", Light, Temp);
+        sprintf(BodyBuf, "light=%f,temp=%f", Light, Temp);
         printf1("Body: %s\r\n", BodyBuf);
 
         /* 构造HTTP请求报文 */

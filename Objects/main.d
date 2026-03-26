@@ -55,6 +55,9 @@
 .\objects\main.o: .\Modules\W25Q64.h
 .\objects\main.o: .\Modules\buzzer.h
 .\objects\main.o: .\Modules\leds.h
+.\objects\main.o: .\Modules\ADC.h
+.\objects\main.o: .\Modules\sensor.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\main.o: .\Task\wifi_config_task.h
 .\objects\main.o: .\Task\esp_task.h
 .\objects\main.o: .\Task\monitor_task.h

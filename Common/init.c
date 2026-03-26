@@ -22,6 +22,9 @@ void System_Init(void) {
     /* 初始化蓝牙模块 */
     BlueTooth_Init();
 
+    /*初始化ADC*/
+    ADC_Config();
+    
 	/* W25Q46模块初始化*/
 	W25Q64_GPIO_Init();
 	W25Q64_SPI1_Init();

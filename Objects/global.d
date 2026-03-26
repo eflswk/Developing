@@ -56,6 +56,9 @@
 .\objects\global.o: .\Modules\W25Q64.h
 .\objects\global.o: .\Modules\buzzer.h
 .\objects\global.o: .\Modules\leds.h
+.\objects\global.o: .\Modules\ADC.h
+.\objects\global.o: .\Modules\sensor.h
+.\objects\global.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\global.o: .\Task\wifi_config_task.h
 .\objects\global.o: .\Task\esp_task.h
 .\objects\global.o: .\Task\monitor_task.h
