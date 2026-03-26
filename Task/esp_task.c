@@ -228,10 +228,13 @@ void ESPTask_Entry(void *arg) {
 
     /* 第七步开始：周期性发送HTTP请求 */
     while (1) {
-        /* 构造假传感器数据，每次略微变化 */
+        /* 传感器数据 ADC读取的电压再计算得到 */
         Light = Get_Light_Intensity();
         Temp = Get_Temperature();
-
+        /*当温度大于三十度的时候，蜂鸣器响*/
+        if(Temp>30){
+            Buzzer_On();
+        }
         printf1("Build Sensor Data...\r\n");
         sprintf(BodyBuf, "light=%f,temp=%f", Light, Temp);
         printf1("Body: %s\r\n", BodyBuf);

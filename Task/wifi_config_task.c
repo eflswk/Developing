@@ -74,6 +74,14 @@ void WiFiConfigTask_Entry(void *arg) {
             printf1("WiFi Config OK\r\n");
             printf1("SSID: %s\r\n", WiFiConfigInfo.SSID);
             printf1("PassWord: %s\r\n", WiFiConfigInfo.PassWord);
+			Flash_Write_WIFI_Flag();
+			
+			if(Flash_Read_WIFI_Flag() == 1) {
+				printf1("Flash writing successed!!!!!!!!！\r\n");
+			} else {
+				printf1("Flash writing failed!!!!!!!!!！\r\n");
+			}
+			
 			/* 保存此次的WIFI配置*/
 			W25Q64_SectorErase(USER_ADDR); // 先擦除
 

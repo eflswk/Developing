@@ -59,6 +59,9 @@
 #include "W25Q64.h"
 #include "ADC.h"
 #include "sensor.h"
+#include "flash.h"
+#include "reset_button.h"
+
 /* ===================== 用户模块 ===================== */
 
 

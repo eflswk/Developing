@@ -31,6 +31,9 @@ void System_Init(void) {
 
     /*初始化LEDS*/
     LEDS_Init();
+
+    /*按键模块初始化*/
+    Key_GPIO_Init();
 	
 	/* 打印之前配置的WIFI*/
 	for(int i=0; i<20; i++){

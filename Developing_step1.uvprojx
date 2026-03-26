@@ -923,6 +923,26 @@
               <FileType>1</FileType>
               <FilePath>.\Modules\sensor.c</FilePath>
             </File>
+            <File>
+              <FileName>reset_button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Modules\reset_button.h</FilePath>
+            </File>
+            <File>
+              <FileName>reset_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Modules\reset_button.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Modules\flash.h</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Modules\flash.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -59,6 +59,8 @@
 .\objects\leds.o: .\Modules\ADC.h
 .\objects\leds.o: .\Modules\sensor.h
 .\objects\leds.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\leds.o: .\Modules\flash.h
+.\objects\leds.o: .\Modules\reset_button.h
 .\objects\leds.o: .\Task\wifi_config_task.h
 .\objects\leds.o: .\Task\esp_task.h
 .\objects\leds.o: .\Task\monitor_task.h

@@ -46,31 +46,46 @@
 
 #include "common.h"
 
-int main(void) {
-    /* 系统初始化 */
+int main(void)
+{
+    // 系统初始化
     System_Init();
-
-    xTaskCreate(Instruction_Task, "Instruction_Task", 
-                configMINIMAL_STACK_SIZE, 
-                NULL, 
-                tskIDLE_PRIORITY + 1, 
+    // 创建 LED 任务
+    xTaskCreate(Instruction_Task, "Instruction_Task",
+                configMINIMAL_STACK_SIZE,
+                NULL,
+                tskIDLE_PRIORITY + 1,
                 NULL);
-                
-    /* 创建 WiFi 配置任务，优先级为2 */
-    BaseType_t xRet = xTaskCreate(WiFiConfigTask_Entry,
-                                  "WiFiCfgTask",
-                                  configMINIMAL_STACK_SIZE,
-                                  NULL,
-                                  tskIDLE_PRIORITY + 2,
-                                  &WiFiConfigTaskHandle);
 
-    /* 判断任务是否创建成功 */
-    if (xRet == pdPASS) {
+    // ====================== 核心逻辑 ======================
+    if(Flash_Read_WIFI_Flag() == 1)  //读flash判断是否连接成功
+    {
+        // 已配网 → 直接启动 ESP 任务
+        printf1("Wifi has connected, skip task\r\n");
+
+        xTaskCreate(ESPTask_Entry, "ESPTask",
+                    configMINIMAL_STACK_SIZE * 2,
+                    NULL,
+                    tskIDLE_PRIORITY + 1,
+                    &ESPTaskHandle);
+    }
+    else
+    {
+        // 未配网 → 创建蓝牙配网任务
+        printf1("Not connected, creat Wificonfig task\r\n");
+
+        BaseType_t xRet = xTaskCreate(WiFiConfigTask_Entry,
+                                      "WiFiCfgTask",
+                                      configMINIMAL_STACK_SIZE,
+                                      NULL,
+                                      tskIDLE_PRIORITY + 2,
+                                      &WiFiConfigTaskHandle);
+        if(xRet == pdPASS) {
         printf1("WiFiConfigTask Create OK\r\n");
     } else {
         printf1("WiFiConfigTask Create Error\r\n");
     }
-	
+}
 	#if ( configENABLE_DEBUG_STACK_MONITOR == 1 )
 	MonitorTask_Create();
 	#endif 

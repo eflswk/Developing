@@ -59,6 +59,8 @@
 .\objects\debug_uart.o: .\Modules\ADC.h
 .\objects\debug_uart.o: .\Modules\sensor.h
 .\objects\debug_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\debug_uart.o: .\Modules\flash.h
+.\objects\debug_uart.o: .\Modules\reset_button.h
 .\objects\debug_uart.o: .\Task\wifi_config_task.h
 .\objects\debug_uart.o: .\Task\esp_task.h
 .\objects\debug_uart.o: .\Task\monitor_task.h

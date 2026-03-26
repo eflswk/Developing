@@ -1,4 +1,4 @@
-#include "Instruction_Task.h"
+#include "common.h"
 
 // 全局状态，默认未开始 —— 常亮
 LED_StatusTypeDef g_led_status = LED_STATUS_IDLE;
@@ -26,5 +26,18 @@ void Instruction_Task(void *arg)
                 vTaskDelay(100);
                 break;
         }
+
+         // 2. 检测是否长按复位键
+
+    // ==================== 长按复位 ====================
+        if(Key_Check_LongPress() == 1)
+        {
+            printf1("press 3sec then reset\r\n");
+            Flash_Clear_WIFI_Flag();   // 清除缓冲区
+            printf1("reseting wifi moudle...\r\n");
+            vTaskDelay(1000);
+            NVIC_SystemReset();
+        }
+
     }
 }

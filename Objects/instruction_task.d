@@ -1,5 +1,4 @@
 .\objects\instruction_task.o: Task\Instruction_task.c
-.\objects\instruction_task.o: Task\Instruction_Task.h
 .\objects\instruction_task.o: .\Common\common.h
 .\objects\instruction_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\instruction_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -59,6 +58,8 @@
 .\objects\instruction_task.o: .\Modules\ADC.h
 .\objects\instruction_task.o: .\Modules\sensor.h
 .\objects\instruction_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\instruction_task.o: .\Modules\flash.h
+.\objects\instruction_task.o: .\Modules\reset_button.h
 .\objects\instruction_task.o: .\Task\wifi_config_task.h
 .\objects\instruction_task.o: .\Task\esp_task.h
 .\objects\instruction_task.o: .\Task\monitor_task.h

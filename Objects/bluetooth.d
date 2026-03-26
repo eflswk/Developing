@@ -59,6 +59,8 @@
 .\objects\bluetooth.o: .\Modules\ADC.h
 .\objects\bluetooth.o: .\Modules\sensor.h
 .\objects\bluetooth.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\bluetooth.o: .\Modules\flash.h
+.\objects\bluetooth.o: .\Modules\reset_button.h
 .\objects\bluetooth.o: .\Task\wifi_config_task.h
 .\objects\bluetooth.o: .\Task\esp_task.h
 .\objects\bluetooth.o: .\Task\monitor_task.h

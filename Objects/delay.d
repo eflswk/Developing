@@ -59,6 +59,8 @@
 .\objects\delay.o: .\Modules\ADC.h
 .\objects\delay.o: .\Modules\sensor.h
 .\objects\delay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\delay.o: .\Modules\flash.h
+.\objects\delay.o: .\Modules\reset_button.h
 .\objects\delay.o: .\Task\wifi_config_task.h
 .\objects\delay.o: .\Task\esp_task.h
 .\objects\delay.o: .\Task\monitor_task.h

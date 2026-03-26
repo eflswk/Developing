@@ -59,6 +59,8 @@
 .\objects\esp_task.o: .\Modules\ADC.h
 .\objects\esp_task.o: .\Modules\sensor.h
 .\objects\esp_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\esp_task.o: .\Modules\flash.h
+.\objects\esp_task.o: .\Modules\reset_button.h
 .\objects\esp_task.o: .\Task\wifi_config_task.h
 .\objects\esp_task.o: .\Task\esp_task.h
 .\objects\esp_task.o: .\Task\monitor_task.h

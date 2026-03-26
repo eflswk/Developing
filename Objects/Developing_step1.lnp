@@ -44,6 +44,8 @@
 ".\objects\w25q64.o"
 ".\objects\adc.o"
 ".\objects\sensor.o"
+".\objects\reset_button.o"
+".\objects\flash.o"
 ".\objects\global.o"
 ".\objects\init.o"
 ".\objects\esp_task.o"
