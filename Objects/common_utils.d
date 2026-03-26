@@ -59,3 +59,4 @@
 .\objects\common_utils.o: .\Task\wifi_config_task.h
 .\objects\common_utils.o: .\Task\esp_task.h
 .\objects\common_utils.o: .\Task\monitor_task.h
+.\objects\common_utils.o: .\Task\Instruction_task.h

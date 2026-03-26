@@ -59,3 +59,4 @@
 .\objects\buzzer.o: .\Task\wifi_config_task.h
 .\objects\buzzer.o: .\Task\esp_task.h
 .\objects\buzzer.o: .\Task\monitor_task.h
+.\objects\buzzer.o: .\Task\Instruction_task.h

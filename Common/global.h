@@ -24,6 +24,13 @@ typedef struct {
     char PassWord[20];  /* WiFi密码 */
 } WiFiConfig_t;
 
+// 定义LED状态
+typedef enum {
+    LED_STATUS_IDLE,      // 未开始连接 —— 常亮
+    LED_STATUS_BLINK,     // 正在连接/配网 —— 闪烁
+    LED_STATUS_OFF        // 连接成功 —— 熄灭
+} LED_StatusTypeDef;
+
 /* ===================== 全局类型定义 ===================== */
 
 
@@ -43,6 +50,9 @@ typedef struct {
 
 /* WiFi配置的全局配置区，蓝牙配网完成后需要给此结构体成员赋值 */
 extern WiFiConfig_t WiFiConfigInfo;
+
+/* 全局LED状态变量 */
+extern LED_StatusTypeDef g_led_status;
 
 /* ===================== 全局变量仅声明 ===================== */
 

@@ -59,3 +59,4 @@
 .\objects\delay.o: .\Task\wifi_config_task.h
 .\objects\delay.o: .\Task\esp_task.h
 .\objects\delay.o: .\Task\monitor_task.h
+.\objects\delay.o: .\Task\Instruction_task.h

@@ -59,3 +59,4 @@
 .\objects\global.o: .\Task\wifi_config_task.h
 .\objects\global.o: .\Task\esp_task.h
 .\objects\global.o: .\Task\monitor_task.h
+.\objects\global.o: .\Task\Instruction_task.h

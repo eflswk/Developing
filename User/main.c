@@ -50,6 +50,12 @@ int main(void) {
     /* 系统初始化 */
     System_Init();
 
+    xTaskCreate(Instruction_Task, "Instruction_Task", 
+                configMINIMAL_STACK_SIZE, 
+                NULL, 
+                tskIDLE_PRIORITY + 1, 
+                NULL);
+                
     /* 创建 WiFi 配置任务，优先级为2 */
     BaseType_t xRet = xTaskCreate(WiFiConfigTask_Entry,
                                   "WiFiCfgTask",

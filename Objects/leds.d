@@ -59,3 +59,4 @@
 .\objects\leds.o: .\Task\wifi_config_task.h
 .\objects\leds.o: .\Task\esp_task.h
 .\objects\leds.o: .\Task\monitor_task.h
+.\objects\leds.o: .\Task\Instruction_task.h

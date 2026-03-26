@@ -65,6 +65,7 @@
 #include "wifi_config_task.h"
 #include "esp_task.h"
 #include "monitor_task.h"
+#include "Instruction_task.h"
 
 /* ===================== 任务模块 ===================== */
 

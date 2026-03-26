@@ -197,6 +197,7 @@ void ESPTask_Entry(void *arg) {
 
     if (ESPTask_SendCmdAndWait(ATCmd, ESP_RSP_OK, RxBuf, sizeof(RxBuf), 15000)) {
         printf1("Connect WiFi OK\r\n");
+		g_led_status = LED_STATUS_OFF;
 		vTaskDelay(pdMS_TO_TICKS(1000));
     } else {
         printf1("Connect WiFi Error\r\n");

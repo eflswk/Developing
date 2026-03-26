@@ -20,11 +20,16 @@ void LEDS_Init(void) {
 }
 
 /*PC13关闭，当WIFI 配网成功时*/
+void LEDS_Off(void){
+        /* 打开 LED，PC13 输出低电平 */
+    GPIO_SetBits(GPIOC, GPIO_Pin_13);
+}
+
+/*PC13开启，当WIFI 没开始配网时*/
 void LEDS_On(void){
         /* 打开 LED，PC13 输出低电平 */
     GPIO_ResetBits(GPIOC, GPIO_Pin_13);
 }
-
 
 /*PC13闪烁，当蓝牙模块开始配网时*/
 void LEDS_Blinking(void){

@@ -24,8 +24,10 @@ void WiFiConfigTask_Entry(void *arg) {
     uint8_t RecvFlag = 0;        /* 帧接收标志位：0表示还未开始接收，1表示正在接收一帧 */
     uint16_t FrameIndex = 0;     /* 当前WiFi配置帧缓冲区的写入下标 */
     char FrameBuf[WIFI_CONFIG_FRAME_MAX_LEN + 1] = {0}; /* WiFi配置帧接收缓冲区 */
-
+    //开始配置WIFI
+    g_led_status = LED_STATUS_BLINK;
     printf1("WiFiConfigTask Start\r\n");
+    LEDS_On();
     printf1("Wait WiFi Config...\r\n");
 
     while (1) {

@@ -25,6 +25,9 @@ void System_Init(void) {
 	/* W25Q46模块初始化*/
 	W25Q64_GPIO_Init();
 	W25Q64_SPI1_Init();
+
+    /*初始化LEDS*/
+    LEDS_Init();
 	
 	/* 打印之前配置的WIFI*/
 	for(int i=0; i<20; i++){

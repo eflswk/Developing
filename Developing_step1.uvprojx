@@ -968,6 +968,16 @@
               <FileType>5</FileType>
               <FilePath>.\Task\monitor_task.h</FilePath>
             </File>
+            <File>
+              <FileName>Instruction_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Task\Instruction_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>Instruction_task.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Task\Instruction_task.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

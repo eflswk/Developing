@@ -59,3 +59,4 @@
 .\objects\bluetooth.o: .\Task\wifi_config_task.h
 .\objects\bluetooth.o: .\Task\esp_task.h
 .\objects\bluetooth.o: .\Task\monitor_task.h
+.\objects\bluetooth.o: .\Task\Instruction_task.h

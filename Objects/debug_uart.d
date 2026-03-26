@@ -59,3 +59,4 @@
 .\objects\debug_uart.o: .\Task\wifi_config_task.h
 .\objects\debug_uart.o: .\Task\esp_task.h
 .\objects\debug_uart.o: .\Task\monitor_task.h
+.\objects\debug_uart.o: .\Task\Instruction_task.h

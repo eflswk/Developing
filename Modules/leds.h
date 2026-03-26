@@ -5,5 +5,7 @@ void LEDS_Init(void);
 
 void LEDS_On(void);
 
+void LEDS_Off(void);
+
 void LEDS_Blinking(void);
-#endif
+#endif  
