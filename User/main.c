@@ -60,8 +60,8 @@ int main(void)
     // ====================== 核心逻辑 ======================
     if(Flash_Read_WIFI_Flag() == 1)  //读flash判断是否连接成功
     {
-        // 已配网 → 直接启动 ESP 任务
-        printf1("Wifi has connected, skip task\r\n");
+        // 上次已经连接过wifi → 直接启动 ESP 任务
+        printf1("Wifi used to be connected, reconnecting\r\n");
 
         xTaskCreate(ESPTask_Entry, "ESPTask",
                     configMINIMAL_STACK_SIZE * 2,
