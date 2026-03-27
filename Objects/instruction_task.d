@@ -60,6 +60,8 @@
 .\objects\instruction_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\instruction_task.o: .\Modules\flash.h
 .\objects\instruction_task.o: .\Modules\reset_button.h
+.\objects\instruction_task.o: .\Modules\dog.h
+.\objects\instruction_task.o: .\Task\feed_dog_task.h
 .\objects\instruction_task.o: .\Task\wifi_config_task.h
 .\objects\instruction_task.o: .\Task\esp_task.h
 .\objects\instruction_task.o: .\Task\monitor_task.h

@@ -61,6 +61,8 @@
 .\objects\reset_button.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\reset_button.o: .\Modules\flash.h
 .\objects\reset_button.o: .\Modules\reset_button.h
+.\objects\reset_button.o: .\Modules\dog.h
+.\objects\reset_button.o: .\Task\feed_dog_task.h
 .\objects\reset_button.o: .\Task\wifi_config_task.h
 .\objects\reset_button.o: .\Task\esp_task.h
 .\objects\reset_button.o: .\Task\monitor_task.h

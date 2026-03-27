@@ -19,6 +19,10 @@ void System_Init(void) {
     /* 初始化延时模块 */
     Delay_Init();
 
+    /*看门狗模块初始化*/
+    IWDG_Config();       // IWDG超时~410ms
+    //WWDG_Config();       // WWDG超时~58ms，窗口值0x50
+
     /* 初始化蓝牙模块 */
     BlueTooth_Init();
 

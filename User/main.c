@@ -50,12 +50,18 @@ int main(void)
 {
     // 系统初始化
     System_Init();
+
+    // 检测复位原因（串口打印，定位是否看门狗复位）
+    System_Reset_Check();
+
     // 创建 LED 任务
     xTaskCreate(Instruction_Task, "Instruction_Task",
                 configMINIMAL_STACK_SIZE,
                 NULL,
                 tskIDLE_PRIORITY + 1,
                 NULL);
+
+    
 
     // ====================== 核心逻辑 ======================
     if(Flash_Read_WIFI_Flag() == 1)  //读flash判断是否连接成功
@@ -81,11 +87,17 @@ int main(void)
                                       tskIDLE_PRIORITY + 2,
                                       &WiFiConfigTaskHandle);
         if(xRet == pdPASS) {
-        printf1("WiFiConfigTask Create OK\r\n");
-    } else {
-        printf1("WiFiConfigTask Create Error\r\n");
-    }
-}
+			printf1("WiFiConfigTask Create OK\r\n");
+		} else {
+			printf1("WiFiConfigTask Create Error\r\n");
+		}
+	}
+	xTaskCreate(FeedDog_Task, "FeedDogTask",
+                configMINIMAL_STACK_SIZE,
+                NULL,
+                tskIDLE_PRIORITY + 1,
+                &FeedDogTaskHandle);
+
 	#if ( configENABLE_DEBUG_STACK_MONITOR == 1 )
 	MonitorTask_Create();
 	#endif 

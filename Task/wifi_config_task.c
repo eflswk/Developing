@@ -20,6 +20,10 @@
   * @retval 无
   */
 void WiFiConfigTask_Entry(void *arg) {
+    //看门狗配置
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    const TickType_t xTaskPeriod = pdMS_TO_TICKS(40);  // 任务周期40ms（小于WWDG超时）
+
     uint8_t RxData = 0;          /* 从蓝牙消息队列中取出的1个字节数据 */
     uint8_t RecvFlag = 0;        /* 帧接收标志位：0表示还未开始接收，1表示正在接收一帧 */
     uint16_t FrameIndex = 0;     /* 当前WiFi配置帧缓冲区的写入下标 */
@@ -30,7 +34,10 @@ void WiFiConfigTask_Entry(void *arg) {
     LEDS_On();
     printf1("Wait WiFi Config...\r\n");
 
+
     while (1) {
+        vTaskDelayUntil(&xLastWakeTime, xTaskPeriod);
+
         /* 阻塞等待蓝牙发来一个字节 */
         xQueueReceive(BT_MsgQueue, &RxData, portMAX_DELAY);
 
@@ -75,7 +82,11 @@ void WiFiConfigTask_Entry(void *arg) {
             printf1("SSID: %s\r\n", WiFiConfigInfo.SSID);
             printf1("PassWord: %s\r\n", WiFiConfigInfo.PassWord);
 			Flash_Write_WIFI_Flag();
-			
+
+
+            //更新任务运行标志
+			g_WiFi_BT_Task_RunFlag = 1;
+
 			if(Flash_Read_WIFI_Flag() == 1) {
 				printf1("Flash writing successed!!!!!!!!！\r\n");
 			} else {

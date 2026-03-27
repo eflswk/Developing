@@ -60,6 +60,8 @@
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\main.o: .\Modules\flash.h
 .\objects\main.o: .\Modules\reset_button.h
+.\objects\main.o: .\Modules\dog.h
+.\objects\main.o: .\Task\feed_dog_task.h
 .\objects\main.o: .\Task\wifi_config_task.h
 .\objects\main.o: .\Task\esp_task.h
 .\objects\main.o: .\Task\monitor_task.h

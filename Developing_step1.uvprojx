@@ -943,6 +943,16 @@
               <FileType>1</FileType>
               <FilePath>.\Modules\flash.c</FilePath>
             </File>
+            <File>
+              <FileName>dog.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Modules\dog.h</FilePath>
+            </File>
+            <File>
+              <FileName>dog.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Modules\dog.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1017,6 +1027,16 @@
               <FileName>Instruction_task.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Task\Instruction_task.h</FilePath>
+            </File>
+            <File>
+              <FileName>feed_dog_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Task\feed_dog_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>feed_dog_task.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Task\feed_dog_task.h</FilePath>
             </File>
           </Files>
         </Group>

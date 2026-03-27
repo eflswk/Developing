@@ -56,6 +56,12 @@ typedef enum {
 // 长按判定时间（3秒）
 #define LONG_PRESS_TIME       3000
 
+//看门狗相关配置
+#define IWDG_PRESCALER    IWDG_Prescaler_256  // 预分频系数：4分频
+#define IWDG_RELOAD_VAL   4095                // 重装载值：最大4095
+#define IWDG_FEED_PERIOD_MS     20000         // 喂狗间隔(ms)，需小于超时时间
+#define WWDG_TASK_CHECK_MS     50             // WWDG监控周期：超时58ms，核心任务需在50ms内更新标志
+
 /* ===================== 全局宏定义 ===================== */
 
 
@@ -67,6 +73,10 @@ extern WiFiConfig_t WiFiConfigInfo;
 /* 全局LED状态变量 */
 extern LED_StatusTypeDef g_led_status;
 
+/* 全局变量：标记核心任务是否正常执行（用于喂狗判断） */
+extern uint8_t g_InstructionTask_RunFlag;  // LED指令任务运行标志
+extern uint8_t g_WiFi_BT_Task_RunFlag;     // WiFi/蓝牙任务运行标志
+
 /* ===================== 全局变量仅声明 ===================== */
 
 
@@ -76,6 +86,7 @@ extern LED_StatusTypeDef g_led_status;
 extern TaskHandle_t WiFiConfigTaskHandle;    /* WiFi配置任务句柄 */
 extern TaskHandle_t ESPTaskHandle;           /* ESP任务句柄 */
 extern TaskHandle_t MonitorTaskHandle;		/* 监察任务句柄 */
+extern TaskHandle_t FeedDogTaskHandle;
 
 /* 消息队列句柄 */
 extern QueueHandle_t BT_MsgQueue;             /* 蓝牙接收手机端消息队列 */

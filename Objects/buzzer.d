@@ -61,6 +61,8 @@
 .\objects\buzzer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\buzzer.o: .\Modules\flash.h
 .\objects\buzzer.o: .\Modules\reset_button.h
+.\objects\buzzer.o: .\Modules\dog.h
+.\objects\buzzer.o: .\Task\feed_dog_task.h
 .\objects\buzzer.o: .\Task\wifi_config_task.h
 .\objects\buzzer.o: .\Task\esp_task.h
 .\objects\buzzer.o: .\Task\monitor_task.h

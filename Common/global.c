@@ -18,7 +18,10 @@ TaskHandle_t ESPTaskHandle;
 // 监察任务只在需要时开启
 // 可以在FreeRTOSConfig.h中配置宏configENABLE_DEBUG_STACK_MONITOR来开关
 TaskHandle_t MonitorTaskHandle;
+TaskHandle_t FeedDogTaskHandle;
 
+uint8_t g_InstructionTask_RunFlag = 0;
+uint8_t g_WiFi_BT_Task_RunFlag = 0;
 /* 队列句柄 */
 QueueHandle_t BT_MsgQueue;
 QueueHandle_t ESP_ATRxQueue;

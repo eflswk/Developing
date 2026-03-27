@@ -142,6 +142,9 @@ static uint8_t ESPTask_SendCmdAndWait(char *Cmd, char *Target, char *RxBuf, uint
   * @note   完成联网并周期性发送HTTP数据
   */
 void ESPTask_Entry(void *arg) {
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    const TickType_t xTaskPeriod = pdMS_TO_TICKS(40);
+
     /* 保存从全局配置区中取出的WiFi名称和密码 */
     char SSID[20] = {0};
     char PassWord[20] = {0};
@@ -228,6 +231,7 @@ void ESPTask_Entry(void *arg) {
 
     /* 第七步开始：周期性发送HTTP请求 */
     while (1) {
+        vTaskDelayUntil(&xLastWakeTime, xTaskPeriod);
         /* 传感器数据 ADC读取的电压再计算得到 */
         Light = Get_Light_Intensity();
         Temp = Get_Temperature();
@@ -269,7 +273,8 @@ void ESPTask_Entry(void *arg) {
             printf1("Server Response Error\r\n");
             while (1);
         }
-
+        
+        g_WiFi_BT_Task_RunFlag = 1;
         /* 周期性任务，每10秒执行一次 */
         vTaskDelayUntil(&LastUploadTime, 10000);
     }

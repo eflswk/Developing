@@ -7,8 +7,12 @@ LED_StatusTypeDef g_led_status = LED_STATUS_IDLE;
 // LED 独立任务
 void Instruction_Task(void *arg)
 {
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    const TickType_t xTaskPeriod = pdMS_TO_TICKS(200);  // 任务周期200ms
+
     while(1)
     {
+        vTaskDelayUntil(&xLastWakeTime, xTaskPeriod);
         switch(g_led_status)
         {
             case LED_STATUS_IDLE:
@@ -38,6 +42,7 @@ void Instruction_Task(void *arg)
             vTaskDelay(1000);
             NVIC_SystemReset();
         }
-
+    //更新任务运行标志（告诉喂狗任务“我还活着”）
+    g_InstructionTask_RunFlag = 1;
     }
 }

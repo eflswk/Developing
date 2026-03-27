@@ -61,6 +61,8 @@
 .\objects\wifi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\wifi.o: .\Modules\flash.h
 .\objects\wifi.o: .\Modules\reset_button.h
+.\objects\wifi.o: .\Modules\dog.h
+.\objects\wifi.o: .\Task\feed_dog_task.h
 .\objects\wifi.o: .\Task\wifi_config_task.h
 .\objects\wifi.o: .\Task\esp_task.h
 .\objects\wifi.o: .\Task\monitor_task.h
