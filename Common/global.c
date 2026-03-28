@@ -25,3 +25,9 @@ uint8_t g_WiFi_BT_Task_RunFlag = 0;
 /* 队列句柄 */
 QueueHandle_t BT_MsgQueue;
 QueueHandle_t ESP_ATRxQueue;
+
+
+
+// 全局缓冲区（给封装函数用）
+char s_RxBuf[ESP_RX_BUF_MAX_LEN];
+char s_ATCmd[128];

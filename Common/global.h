@@ -36,6 +36,44 @@ typedef enum {
 
 /* ===================== 全局宏定义 ===================== */
 
+
+
+/* ==================== ESP 常用 AT 指令 ==================== */
+
+/* 测试 AT */
+#define ESP_CMD_AT                       "AT\r\n"
+
+/* 关闭回显 */
+#define ESP_CMD_ATE0                     "ATE0\r\n"
+
+/* 设置为 STA 模式 */
+#define ESP_CMD_CWMODE1                  "AT+CWMODE=1\r\n"
+
+/* ==================== ESP 常用响应字符串 ==================== */
+
+/* 普通 AT 指令执行成功 */
+#define ESP_RSP_OK                       "\r\nOK\r\n"
+
+/* 连接热点成功 */
+#define ESP_RSP_WIFI_GOT_IP              "WIFI GOT IP"
+
+/* 建立 TCP 连接成功 */
+#define ESP_RSP_CONNECT                  "CONNECT"
+
+/* CIPSEND 后的发送提示符 */
+#define ESP_RSP_PROMPT                   ">"
+
+/* 数据发送成功 */
+#define ESP_RSP_SEND_OK                  "SEND OK"
+
+/* 服务端响应成功 */
+#define ESP_RSP_SERVER_OK                "OK"
+
+
+ /* ESP 接收缓冲区最大长度 */
+#define ESP_RX_BUF_MAX_LEN               256
+
+
 /* 服务端配置 */
 #define SERVER_IP      "8.136.26.114"
 #define SERVER_PORT    9008
@@ -92,7 +130,14 @@ extern TaskHandle_t FeedDogTaskHandle;
 extern QueueHandle_t BT_MsgQueue;             /* 蓝牙接收手机端消息队列 */
 extern QueueHandle_t ESP_ATRxQueue;        /* ESP接收AT反馈消息队列 */
 
+
+// 全局缓冲区（给封装函数用）
+extern char s_RxBuf[ESP_RX_BUF_MAX_LEN];
+extern char s_ATCmd[128];
+
 /* ===================== FreeRTOS句柄仅声明 ===================== */
+
+
 
 
 #endif // !__GLOBAL_H
