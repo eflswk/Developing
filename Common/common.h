@@ -62,7 +62,6 @@
 #include "flash.h"
 #include "reset_button.h"
 #include "dog.h"
-#include "feed_dog_task.h"
 
 /* ===================== 用户模块 ===================== */
 
@@ -73,6 +72,8 @@
 #include "esp_task.h"
 #include "monitor_task.h"
 #include "Instruction_task.h"
+#include "wifi_reconnect_task.h"
+#include "feed_dog_task.h"
 
 /* ===================== 任务模块 ===================== */
 

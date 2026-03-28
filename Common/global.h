@@ -87,6 +87,7 @@ typedef enum {
 // WIFI已配置标记（自定义值，避免与擦除后全1冲突）
 #define WIFI_CONFIGURED_FLAG  0x5A5A5A5A
 
+
 // 按键GPIO定义（PA0）
 #define RESET_KEY_GPIO_PORT   GPIOB
 #define RESET_KEY_GPIO_PIN    GPIO_Pin_4
@@ -115,6 +116,13 @@ extern LED_StatusTypeDef g_led_status;
 extern uint8_t g_InstructionTask_RunFlag;  // LED指令任务运行标志
 extern uint8_t g_WiFi_BT_Task_RunFlag;     // WiFi/蓝牙任务运行标志
 
+
+// WiFi连接状态标志（volatile保证多任务可见性）
+extern uint8_t g_WiFi_Connect_State;  // 0:未连接/失败  1:已连接
+
+// 防止重连任务重复创建的锁
+extern uint8_t g_WiFi_Reconnect_Task_Created;  // 0:未创建 1:已创建
+
 /* ===================== 全局变量仅声明 ===================== */
 
 
@@ -125,6 +133,7 @@ extern TaskHandle_t WiFiConfigTaskHandle;    /* WiFi配置任务句柄 */
 extern TaskHandle_t ESPTaskHandle;           /* ESP任务句柄 */
 extern TaskHandle_t MonitorTaskHandle;		/* 监察任务句柄 */
 extern TaskHandle_t FeedDogTaskHandle;
+extern TaskHandle_t WiFiReconnectTaskHandle;
 
 /* 消息队列句柄 */
 extern QueueHandle_t BT_MsgQueue;             /* 蓝牙接收手机端消息队列 */

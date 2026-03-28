@@ -61,8 +61,9 @@
 .\objects\main.o: .\Modules\flash.h
 .\objects\main.o: .\Modules\reset_button.h
 .\objects\main.o: .\Modules\dog.h
-.\objects\main.o: .\Task\feed_dog_task.h
 .\objects\main.o: .\Task\wifi_config_task.h
 .\objects\main.o: .\Task\esp_task.h
 .\objects\main.o: .\Task\monitor_task.h
 .\objects\main.o: .\Task\Instruction_task.h
+.\objects\main.o: .\Task\wifi_reconnect_task.h
+.\objects\main.o: .\Task\feed_dog_task.h

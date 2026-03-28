@@ -1038,6 +1038,16 @@
               <FileType>5</FileType>
               <FilePath>.\Task\feed_dog_task.h</FilePath>
             </File>
+            <File>
+              <FileName>wifi_reconnect_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Task\wifi_reconnect_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>wifi_reconnect_task.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Task\wifi_reconnect_task.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

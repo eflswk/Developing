@@ -187,21 +187,25 @@ uint8_t ESP_NetworkConnect(void)
     // 1. 初始化ESP
     if (!ESP_Init()) {
         printf1("ESP Init Fail\r\n");
+        g_WiFi_Connect_State = 0;  // 连接失败，置0
         return 0;
     }
 
     // 2. 连接WiFi
     if (!ESP_ConnectWiFi(SSID, PassWord)) {
         printf1("WiFi Connect Fail\r\n");
+        g_WiFi_Connect_State = 0;  // 连接失败，置0
         return 0;
     }
 
     // 3. 连接TCP
     if (!ESP_ConnectTCP()) {
         printf1("TCP Connect Fail\r\n");
+        g_WiFi_Connect_State = 0;  // 连接失败，置0
         return 0;
     }
 
     printf1("=== Network Connect All OK ===\r\n");
+    g_WiFi_Connect_State = 1;  // 连接成功，置1
     return 1;
 }

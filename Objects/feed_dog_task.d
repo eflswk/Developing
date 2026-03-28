@@ -62,8 +62,9 @@
 .\objects\feed_dog_task.o: .\Modules\flash.h
 .\objects\feed_dog_task.o: .\Modules\reset_button.h
 .\objects\feed_dog_task.o: .\Modules\dog.h
-.\objects\feed_dog_task.o: .\Task\feed_dog_task.h
 .\objects\feed_dog_task.o: .\Task\wifi_config_task.h
 .\objects\feed_dog_task.o: .\Task\esp_task.h
 .\objects\feed_dog_task.o: .\Task\monitor_task.h
 .\objects\feed_dog_task.o: .\Task\Instruction_task.h
+.\objects\feed_dog_task.o: .\Task\wifi_reconnect_task.h
+.\objects\feed_dog_task.o: .\Task\feed_dog_task.h

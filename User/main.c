@@ -92,6 +92,8 @@ int main(void)
 			printf1("WiFiConfigTask Create Error\r\n");
 		}
 	}
+
+    
 	xTaskCreate(FeedDog_Task, "FeedDogTask",
                 configMINIMAL_STACK_SIZE,
                 NULL,

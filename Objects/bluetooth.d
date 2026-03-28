@@ -62,8 +62,9 @@
 .\objects\bluetooth.o: .\Modules\flash.h
 .\objects\bluetooth.o: .\Modules\reset_button.h
 .\objects\bluetooth.o: .\Modules\dog.h
-.\objects\bluetooth.o: .\Task\feed_dog_task.h
 .\objects\bluetooth.o: .\Task\wifi_config_task.h
 .\objects\bluetooth.o: .\Task\esp_task.h
 .\objects\bluetooth.o: .\Task\monitor_task.h
 .\objects\bluetooth.o: .\Task\Instruction_task.h
+.\objects\bluetooth.o: .\Task\wifi_reconnect_task.h
+.\objects\bluetooth.o: .\Task\feed_dog_task.h

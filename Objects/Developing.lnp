@@ -54,6 +54,7 @@
 ".\objects\monitor_task.o"
 ".\objects\instruction_task.o"
 ".\objects\feed_dog_task.o"
+".\objects\wifi_reconnect_task.o"
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 --strict --scatter ".\Objects\Developing.sct"

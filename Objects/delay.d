@@ -62,8 +62,9 @@
 .\objects\delay.o: .\Modules\flash.h
 .\objects\delay.o: .\Modules\reset_button.h
 .\objects\delay.o: .\Modules\dog.h
-.\objects\delay.o: .\Task\feed_dog_task.h
 .\objects\delay.o: .\Task\wifi_config_task.h
 .\objects\delay.o: .\Task\esp_task.h
 .\objects\delay.o: .\Task\monitor_task.h
 .\objects\delay.o: .\Task\Instruction_task.h
+.\objects\delay.o: .\Task\wifi_reconnect_task.h
+.\objects\delay.o: .\Task\feed_dog_task.h
