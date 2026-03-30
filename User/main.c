@@ -92,6 +92,24 @@ int main(void)
 			printf1("WiFiConfigTask Create Error\r\n");
 		}
 	}
+    
+    if (OutlineTaskHandle == NULL) {
+    BaseType_t ret = xTaskCreate(Outline_Entry, "OutlineTask", 
+                    configMINIMAL_STACK_SIZE * 3, 
+                    NULL, 
+                    tskIDLE_PRIORITY + 1, 
+                    &OutlineTaskHandle);
+    if (ret == pdPASS) {
+        printf1("OutlineTask Create OK\r\n");
+        // WiFi在线时，直接挂起任务
+        if (g_WiFi_Connect_State == 1) {
+            vTaskSuspend(OutlineTaskHandle);
+            printf1("OutlineTask Suspended (WiFi Online)\r\n");
+        }
+    } else {
+        printf1("OutlineTask Create Error\r\n");
+    }
+}
 
     
 	xTaskCreate(FeedDog_Task, "FeedDogTask",

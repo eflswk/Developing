@@ -74,6 +74,7 @@
 #include "Instruction_task.h"
 #include "wifi_reconnect_task.h"
 #include "feed_dog_task.h"
+#include "outline_task.h"
 
 /* ===================== 任务模块 ===================== */
 

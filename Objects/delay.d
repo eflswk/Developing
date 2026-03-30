@@ -68,3 +68,4 @@
 .\objects\delay.o: .\Task\Instruction_task.h
 .\objects\delay.o: .\Task\wifi_reconnect_task.h
 .\objects\delay.o: .\Task\feed_dog_task.h
+.\objects\delay.o: .\Task\outline_task.h

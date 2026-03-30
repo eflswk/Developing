@@ -81,6 +81,12 @@ typedef enum {
 /*W25Q64存储地址*/
 #define USER_ADDR  0x000000
 
+// W25Q64存储相关
+#define W25Q64_PAGE_SIZE         256        // W25Q64每页256字节
+#define W25Q64_WIFI_INFO_PAGE    0x0000     // 第一页：WiFi账号密码
+#define W25Q64_DATA_START_ADDR   0x1000     // 第二扇区地址：离线数据存储起始
+#define W25Q64_SECTOR_SIZE       4096       // 每个扇区4KB（16页）
+
 // Flash配置标记地址（选择未被程序占用的页首地址）
 #define FLASH_WIFI_FLAG_ADDR  0x0800F000
 
@@ -116,6 +122,10 @@ extern LED_StatusTypeDef g_led_status;
 extern uint8_t g_InstructionTask_RunFlag;  // LED指令任务运行标志
 extern uint8_t g_WiFi_BT_Task_RunFlag;     // WiFi/蓝牙任务运行标志
 
+// 离线数据存储全局变量（记录当前写入地址、当前扇区是否已擦除）
+extern uint32_t g_W25Q64_Current_Write_Addr;
+extern uint8_t  g_W25Q64_Current_Sector_Erased;
+
 
 // WiFi连接状态标志（volatile保证多任务可见性）
 extern uint8_t g_WiFi_Connect_State;  // 0:未连接/失败  1:已连接
@@ -132,8 +142,9 @@ extern uint8_t g_WiFi_Reconnect_Task_Created;  // 0:未创建 1:已创建
 extern TaskHandle_t WiFiConfigTaskHandle;    /* WiFi配置任务句柄 */
 extern TaskHandle_t ESPTaskHandle;           /* ESP任务句柄 */
 extern TaskHandle_t MonitorTaskHandle;		/* 监察任务句柄 */
-extern TaskHandle_t FeedDogTaskHandle;
-extern TaskHandle_t WiFiReconnectTaskHandle;
+extern TaskHandle_t FeedDogTaskHandle;      /* 看门狗任务 */
+extern TaskHandle_t WiFiReconnectTaskHandle;    /* 重连任务 */
+extern TaskHandle_t OutlineTaskHandle;      /* 离线处理任务 */
 
 /* 消息队列句柄 */
 extern QueueHandle_t BT_MsgQueue;             /* 蓝牙接收手机端消息队列 */
@@ -145,7 +156,7 @@ extern char s_RxBuf[ESP_RX_BUF_MAX_LEN];
 extern char s_ATCmd[128];
 
 /* ===================== FreeRTOS句柄仅声明 ===================== */
-
+extern SemaphoreHandle_t ESP_UART_Mutex;
 
 
 

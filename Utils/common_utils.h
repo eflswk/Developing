@@ -21,4 +21,6 @@ uint8_t ESP_ConnectTCP(void);
 uint8_t ESP_SendSensorData(float light, float temp);
 
 uint8_t ESP_NetworkConnect(void);
+
+uint8_t ESP_SendMultiSensorData(char *data_str);
 #endif

@@ -20,11 +20,19 @@ TaskHandle_t ESPTaskHandle;
 TaskHandle_t MonitorTaskHandle;
 TaskHandle_t FeedDogTaskHandle;
 TaskHandle_t WiFiReconnectTaskHandle;
+TaskHandle_t FeedDogTaskHandle;      
+TaskHandle_t WiFiReconnectTaskHandle;    
+TaskHandle_t OutlineTaskHandle;     
+
 
 uint8_t g_InstructionTask_RunFlag = 0;
 uint8_t g_WiFi_BT_Task_RunFlag = 0;
 uint8_t g_WiFi_Reconnect_Task_Created = 0;
 uint8_t g_WiFi_Connect_State = 1;
+
+//W25Q64存储的地址/是否已经擦除
+uint32_t g_W25Q64_Current_Write_Addr = W25Q64_DATA_START_ADDR;
+uint8_t  g_W25Q64_Current_Sector_Erased = 0;
 
 /* 队列句柄 */
 QueueHandle_t BT_MsgQueue;

@@ -68,3 +68,4 @@
 .\objects\leds.o: .\Task\Instruction_task.h
 .\objects\leds.o: .\Task\wifi_reconnect_task.h
 .\objects\leds.o: .\Task\feed_dog_task.h
+.\objects\leds.o: .\Task\outline_task.h

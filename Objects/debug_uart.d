@@ -68,3 +68,4 @@
 .\objects\debug_uart.o: .\Task\Instruction_task.h
 .\objects\debug_uart.o: .\Task\wifi_reconnect_task.h
 .\objects\debug_uart.o: .\Task\feed_dog_task.h
+.\objects\debug_uart.o: .\Task\outline_task.h

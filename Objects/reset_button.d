@@ -68,3 +68,4 @@
 .\objects\reset_button.o: .\Task\Instruction_task.h
 .\objects\reset_button.o: .\Task\wifi_reconnect_task.h
 .\objects\reset_button.o: .\Task\feed_dog_task.h
+.\objects\reset_button.o: .\Task\outline_task.h

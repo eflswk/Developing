@@ -7,7 +7,7 @@
 void WiFiReconnectTask_Entry(void *arg)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    const TickType_t xReconnectPeriod = pdMS_TO_TICKS(5000);  // 5秒重连一次
+    const TickType_t xReconnectPeriod = pdMS_TO_TICKS(10000);  // 10秒重连一次
 
     while (1)
     {

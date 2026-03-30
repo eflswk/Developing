@@ -68,3 +68,4 @@
 .\objects\flash.o: .\Task\Instruction_task.h
 .\objects\flash.o: .\Task\wifi_reconnect_task.h
 .\objects\flash.o: .\Task\feed_dog_task.h
+.\objects\flash.o: .\Task\outline_task.h

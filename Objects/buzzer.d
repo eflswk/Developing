@@ -68,3 +68,4 @@
 .\objects\buzzer.o: .\Task\Instruction_task.h
 .\objects\buzzer.o: .\Task\wifi_reconnect_task.h
 .\objects\buzzer.o: .\Task\feed_dog_task.h
+.\objects\buzzer.o: .\Task\outline_task.h

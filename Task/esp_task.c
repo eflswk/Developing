@@ -34,6 +34,13 @@ void ESPTask_Entry(void *arg) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     const TickType_t xTaskPeriod = pdMS_TO_TICKS(40);
     ESP_NetworkConnect();
+    // if(g_WiFi_Connect_State == 0&&OutlineTaskHandle == NULL){
+    //     xTaskCreate(Outline_Entry, "OutlineTask", 
+    //             configMINIMAL_STACK_SIZE * 3, 
+    //             NULL, 
+    //             tskIDLE_PRIORITY + 1, 
+    //             &OutlineTaskHandle);
+    // }
 
     float Light = 0;
     float Temp = 0;

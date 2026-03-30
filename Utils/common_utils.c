@@ -155,6 +155,11 @@ uint8_t ESP_SendSensorData(float light, float temp)
     sprintf(s_ATCmd, "AT+CIPSEND=%d\r\n", strlen(HttpBuf));
     if (!ESPTask_SendCmdAndWait(s_ATCmd, ESP_RSP_PROMPT, s_RxBuf, sizeof(s_RxBuf), 500)) {
         printf1("Begin upload failed...\r\n");
+        // 检测到TCP断连，重置WiFi状态
+        if (strstr(s_RxBuf, "link is not valid") != NULL) {
+            g_WiFi_Connect_State = 0; // TCP断连=离线
+            printf1("TCP link broken, set WiFi state to offline\r\n");
+        }
         return 0;
     }
 
@@ -166,6 +171,44 @@ uint8_t ESP_SendSensorData(float light, float temp)
         return 1;
     } else {
         printf1("Server Response Error\r\n");
+        //上传失败也检查TCP状态
+        if (strstr(s_RxBuf, "link is not valid") != NULL) {
+            g_WiFi_Connect_State = 0;
+        }
+        return 0;
+    }
+}
+
+// 上传多组离线数据（/y 接口）
+uint8_t ESP_SendMultiSensorData(char *data_str)
+{
+    char HttpBuf[256] = {0};  // 足够存多组数据
+
+    // 严格按照你的协议：POST /y HTTP/1.1 + 多组数据
+    sprintf(HttpBuf, "POST /y HTTP/1.1\r\n\r\n%s", data_str);
+    // 【新增打印】查看最终发送的HTTP报文
+    printf1("Multi Upload HTTP Buf: %s\r\n", HttpBuf);
+    printf1("HTTP Buf Length: %d\r\n", strlen(HttpBuf));
+
+    // 发送长度指令
+    sprintf(s_ATCmd, "AT+CIPSEND=%d\r\n", strlen(HttpBuf));
+    // 【新增打印】查看AT指令
+    printf1("Send AT Cmd: %s\r\n", s_ATCmd);
+    
+    if (!ESPTask_SendCmdAndWait(s_ATCmd, ESP_RSP_PROMPT, s_RxBuf, sizeof(s_RxBuf), 500)) {
+        printf1("Multi upload begin failed...\r\n");
+        return 0;
+    }
+
+    ESPTask_ClearQueue();
+    WIFI_SendString(HttpBuf);  // 用你项目已有的发送函数
+
+    // 等待服务器返回 OK
+    if (ESPTask_WaitResponse("\r\n\r\nOK", s_RxBuf, sizeof(s_RxBuf), 5000)) {
+        printf1("Multi data upload OK\r\n");
+        return 1;
+    } else {
+        printf1("Multi data upload Error, RxBuf: %s\r\n", s_RxBuf);
         return 0;
     }
 }
@@ -205,7 +248,12 @@ uint8_t ESP_NetworkConnect(void)
         return 0;
     }
 
-    printf1("=== Network Connect All OK ===\r\n");
-    g_WiFi_Connect_State = 1;  // 连接成功，置1
+    // 新增：恢复Outline任务，触发批量离线数据上传
+    if (OutlineTaskHandle != NULL) {
+    vTaskResume(OutlineTaskHandle);
+    printf1("Resume Outline Task to upload offline data\r\n");
+} else {
+    printf1("OutlineTaskHandle is NULL! Can't resume\r\n");
+}
     return 1;
 }

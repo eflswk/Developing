@@ -68,3 +68,4 @@
 .\objects\common_utils.o: .\Task\Instruction_task.h
 .\objects\common_utils.o: .\Task\wifi_reconnect_task.h
 .\objects\common_utils.o: .\Task\feed_dog_task.h
+.\objects\common_utils.o: .\Task\outline_task.h

@@ -68,3 +68,4 @@
 .\objects\bluetooth.o: .\Task\Instruction_task.h
 .\objects\bluetooth.o: .\Task\wifi_reconnect_task.h
 .\objects\bluetooth.o: .\Task\feed_dog_task.h
+.\objects\bluetooth.o: .\Task\outline_task.h

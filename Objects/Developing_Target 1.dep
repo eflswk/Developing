@@ -897,9 +897,9 @@ I (FreeRTOS\list.h)(0x68F907AE)
 I (FreeRTOS\queue.h)(0x68F907AE)
 I (FreeRTOS\timers.h)(0x68F907AE)
 F (.\FreeRTOS\timers.h)(0x68F907AE)()
-F (.\Utils\common_utils.c)(0x69C7349A)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\common_utils.o --omf_browse .\objects\common_utils.crf --depend .\objects\common_utils.d)
-I (Utils\common_utils.h)(0x69C692CA)
-I (.\Common\common.h)(0x69C735EF)
+F (.\Utils\common_utils.c)(0x69C96BEA)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\common_utils.o --omf_browse .\objects\common_utils.crf --depend .\objects\common_utils.d)
+I (Utils\common_utils.h)(0x69C780F2)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -946,8 +946,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -965,10 +965,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
-F (.\Utils\common_utils.h)(0x69C692CA)()
+I (.\Task\outline_task.h)(0x69C74B23)
+F (.\Utils\common_utils.h)(0x69C780F2)()
 F (.\Utils\delay.c)(0x69C33A80)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
 I (Utils\delay.h)(0x69C33A78)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1015,8 +1016,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1034,10 +1035,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Utils\delay.h)(0x69C33A78)()
 F (.\Modules\bluetooth.c)(0x69C39800)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\bluetooth.o --omf_browse .\objects\bluetooth.crf --depend .\objects\bluetooth.d)
 I (Modules\bluetooth.h)(0x69C33EA0)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1084,8 +1086,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1103,10 +1105,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\bluetooth.h)(0x69C33EA0)()
 F (.\Modules\debug_uart.c)(0x69C33EEA)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\debug_uart.o --omf_browse .\objects\debug_uart.crf --depend .\objects\debug_uart.d)
 I (Modules\debug_uart.h)(0x69C33CB6)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1153,8 +1156,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1172,10 +1175,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\debug_uart.h)(0x69C33CB6)()
 F (.\Modules\wifi.c)(0x69C3B61E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi.o --omf_browse .\objects\wifi.crf --depend .\objects\wifi.d)
 I (Modules\wifi.h)(0x69C3A932)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1222,8 +1226,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1241,10 +1245,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\wifi.h)(0x69C3A932)()
 F (.\Modules\buzzer.c)(0x69C27FF9)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\buzzer.o --omf_browse .\objects\buzzer.crf --depend .\objects\buzzer.d)
 I (Modules\buzzer.h)(0x69C39E6A)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1291,8 +1296,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1310,10 +1315,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\buzzer.h)(0x69C39E6A)()
 F (.\Modules\leds.c)(0x69C4CEA2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\leds.o --omf_browse .\objects\leds.crf --depend .\objects\leds.d)
 I (Modules\leds.h)(0x69C49ECF)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1360,8 +1366,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1379,10 +1385,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\leds.h)(0x69C49ECF)()
 F (.\Modules\W25Q64.c)(0x69C1097C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\w25q64.o --omf_browse .\objects\w25q64.crf --depend .\objects\w25q64.d)
 I (Modules\W25Q64.h)(0x69C39E68)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1429,8 +1436,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1448,6 +1455,7 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\W25Q64.h)(0x69C39E68)()
 F (.\Modules\ADC.h)(0x69C4E851)()
 F (.\Modules\ADC.c)(0x69C4E872)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
@@ -1516,7 +1524,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
 F (.\Modules\reset_button.h)(0x69C52354)()
 F (.\Modules\reset_button.c)(0x69C52DE2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\reset_button.o --omf_browse .\objects\reset_button.crf --depend .\objects\reset_button.d)
 I (Modules\reset_button.h)(0x69C52354)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1563,8 +1571,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1582,10 +1590,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\flash.h)(0x69C52354)()
 F (.\Modules\flash.c)(0x69C52DE2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\flash.o --omf_browse .\objects\flash.crf --depend .\objects\flash.d)
 I (Modules\flash.h)(0x69C52354)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1632,8 +1641,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1651,10 +1660,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Modules\dog.h)(0x69C5F4E1)()
 F (.\Modules\dog.c)(0x69C5FA02)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\dog.o --omf_browse .\objects\dog.crf --depend .\objects\dog.d)
 I (Modules\dog.h)(0x69C5F4E1)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1701,8 +1711,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1720,10 +1730,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
-F (.\Common\common.h)(0x69C735EF)()
-F (.\Common\global.c)(0x69C739F6)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\global.o --omf_browse .\objects\global.crf --depend .\objects\global.d)
-I (Common\global.h)(0x69C7366E)
-I (Common\common.h)(0x69C735EF)
+I (.\Task\outline_task.h)(0x69C74B23)
+F (.\Common\common.h)(0x69C74B5C)()
+F (.\Common\global.c)(0x69C96AAD)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\global.o --omf_browse .\objects\global.crf --depend .\objects\global.d)
+I (Common\global.h)(0x69C969D4)
+I (Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1768,10 +1779,10 @@ I (.\FreeRTOS\list.h)(0x68F907AE)
 I (.\FreeRTOS\queue.h)(0x68F907AE)
 I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
+I (.\Utils\common_utils.h)(0x69C780F2)
 I (Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1789,10 +1800,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
-F (.\Common\global.h)(0x69C7366E)()
+I (.\Task\outline_task.h)(0x69C74B23)
+F (.\Common\global.h)(0x69C969D4)()
 F (.\Common\init.c)(0x69C5F5FD)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
 I (Common\init.h)(0x69C33EA0)
-I (Common\common.h)(0x69C735EF)
+I (Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1837,11 +1849,11 @@ I (.\FreeRTOS\list.h)(0x68F907AE)
 I (.\FreeRTOS\queue.h)(0x68F907AE)
 I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (Common\global.h)(0x69C969D4)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
 I (.\Modules\buzzer.h)(0x69C39E6A)
@@ -1858,10 +1870,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Common\init.h)(0x69C33EA0)()
-F (.\Task\esp_task.c)(0x69C6934D)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\esp_task.o --omf_browse .\objects\esp_task.crf --depend .\objects\esp_task.d)
+F (.\Task\esp_task.c)(0x69C96BE2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\esp_task.o --omf_browse .\objects\esp_task.crf --depend .\objects\esp_task.d)
 I (Task\esp_task.h)(0x69C3C0FE)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1908,8 +1921,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1927,10 +1940,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\esp_task.h)(0x69C3C0FE)()
 F (.\Task\wifi_config_task.c)(0x69C5F3B7)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi_config_task.o --omf_browse .\objects\wifi_config_task.crf --depend .\objects\wifi_config_task.d)
 I (Task\wifi_config_task.h)(0x69C35708)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1977,8 +1991,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -1996,10 +2010,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\wifi_config_task.h)(0x69C35708)()
 F (.\Task\monitor_task.c)(0x69C3CAA6)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\monitor_task.o --omf_browse .\objects\monitor_task.crf --depend .\objects\monitor_task.d)
 I (Task\monitor_task.h)(0x69C3C7CC)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2046,8 +2061,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -2065,9 +2080,10 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\monitor_task.h)(0x69C3C7CC)()
-F (.\Task\Instruction_task.c)(0x69C7380E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\instruction_task.o --omf_browse .\objects\instruction_task.crf --depend .\objects\instruction_task.d)
-I (.\Common\common.h)(0x69C735EF)
+F (.\Task\Instruction_task.c)(0x69C740DD)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\instruction_task.o --omf_browse .\objects\instruction_task.crf --depend .\objects\instruction_task.d)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2114,8 +2130,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -2133,10 +2149,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\Instruction_task.h)(0x69C4A895)()
-F (.\Task\feed_dog_task.c)(0x69C5F4E1)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\feed_dog_task.o --omf_browse .\objects\feed_dog_task.crf --depend .\objects\feed_dog_task.d)
+F (.\Task\feed_dog_task.c)(0x69C96304)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\feed_dog_task.o --omf_browse .\objects\feed_dog_task.crf --depend .\objects\feed_dog_task.d)
 I (Task\feed_dog_task.h)(0x69C5F4E1)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2183,8 +2200,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -2202,10 +2219,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\feed_dog_task.h)(0x69C5F4E1)()
-F (.\Task\wifi_reconnect_task.c)(0x69C73871)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi_reconnect_task.o --omf_browse .\objects\wifi_reconnect_task.crf --depend .\objects\wifi_reconnect_task.d)
+F (.\Task\wifi_reconnect_task.c)(0x69C964DF)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\wifi_reconnect_task.o --omf_browse .\objects\wifi_reconnect_task.crf --depend .\objects\wifi_reconnect_task.d)
 I (Task\wifi_reconnect_task.h)(0x69C735B7)
-I (.\Common\common.h)(0x69C735EF)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2252,8 +2270,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -2271,9 +2289,11 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\Task\wifi_reconnect_task.h)(0x69C735B7)()
-F (.\User\main.c)(0x69C730DA)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (.\Common\common.h)(0x69C735EF)
+F (.\Task\outline_task.c)(0x69C96BDE)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\outline_task.o --omf_browse .\objects\outline_task.crf --depend .\objects\outline_task.d)
+I (Task\outline_task.h)(0x69C74B23)
+I (.\Common\common.h)(0x69C74B5C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2320,8 +2340,8 @@ I (.\FreeRTOS\semphr.h)(0x68F907AE)
 I (.\Modules\debug_uart.h)(0x69C33CB6)
 I (.\Modules\bluetooth.h)(0x69C33EA0)
 I (.\Utils\delay.h)(0x69C33A78)
-I (.\Utils\common_utils.h)(0x69C692CA)
-I (.\Common\global.h)(0x69C7366E)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
 I (.\Common\init.h)(0x69C33EA0)
 I (.\Modules\wifi.h)(0x69C3A932)
 I (.\Modules\W25Q64.h)(0x69C39E68)
@@ -2339,6 +2359,76 @@ I (.\Task\monitor_task.h)(0x69C3C7CC)
 I (.\Task\Instruction_task.h)(0x69C4A895)
 I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
 I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
+F (.\Task\outline_task.h)(0x69C74B23)()
+F (.\User\main.c)(0x69C97364)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Common\common.h)(0x69C74B5C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\Core\stm32f10x.h)(0x4D783CB4)
+I (.\Core\core_cm3.h)(0x4D523B58)
+I (.\Core\system_stm32f10x.h)(0x4D783CAA)
+I (.\User\stm32f10x_conf.h)(0x4D99A59E)
+I (.\Lib\stm32f10x_adc.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_bkp.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_can.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_cec.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_crc.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_dac.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_dbgmcu.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_dma.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_exti.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_flash.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_fsmc.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_gpio.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_i2c.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_iwdg.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_pwr.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_rcc.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_rtc.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_sdio.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_spi.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_tim.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_usart.h)(0x4D783BB4)
+I (.\Lib\stm32f10x_wwdg.h)(0x4D783BB4)
+I (.\Lib\misc.h)(0x4D783BB4)
+I (.\FreeRTOS\FreeRTOS.h)(0x68F907AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\User\FreeRTOSConfig.h)(0x69C3CD86)
+I (.\FreeRTOS\projdefs.h)(0x68F907AE)
+I (.\FreeRTOS\portable.h)(0x68F907AE)
+I (.\FreeRTOS\deprecated_definitions.h)(0x68F907AE)
+I (.\FreeRTOS\portmacro.h)(0x68F907AE)
+I (.\FreeRTOS\mpu_wrappers.h)(0x68F907AE)
+I (.\FreeRTOS\task.h)(0x68F907AE)
+I (.\FreeRTOS\list.h)(0x68F907AE)
+I (.\FreeRTOS\queue.h)(0x68F907AE)
+I (.\FreeRTOS\semphr.h)(0x68F907AE)
+I (.\Modules\debug_uart.h)(0x69C33CB6)
+I (.\Modules\bluetooth.h)(0x69C33EA0)
+I (.\Utils\delay.h)(0x69C33A78)
+I (.\Utils\common_utils.h)(0x69C780F2)
+I (.\Common\global.h)(0x69C969D4)
+I (.\Common\init.h)(0x69C33EA0)
+I (.\Modules\wifi.h)(0x69C3A932)
+I (.\Modules\W25Q64.h)(0x69C39E68)
+I (.\Modules\buzzer.h)(0x69C39E6A)
+I (.\Modules\leds.h)(0x69C49ECF)
+I (.\Modules\ADC.h)(0x69C4E851)
+I (.\Modules\sensor.h)(0x69C4FD08)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+I (.\Modules\flash.h)(0x69C52354)
+I (.\Modules\reset_button.h)(0x69C52354)
+I (.\Modules\dog.h)(0x69C5F4E1)
+I (.\Task\wifi_config_task.h)(0x69C35708)
+I (.\Task\esp_task.h)(0x69C3C0FE)
+I (.\Task\monitor_task.h)(0x69C3C7CC)
+I (.\Task\Instruction_task.h)(0x69C4A895)
+I (.\Task\wifi_reconnect_task.h)(0x69C735B7)
+I (.\Task\feed_dog_task.h)(0x69C5F4E1)
+I (.\Task\outline_task.h)(0x69C74B23)
 F (.\User\stm32f10x_conf.h)(0x4D99A59E)()
 F (.\User\stm32f10x_it.c)(0x69C33F22)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Core -I .\Lib -I .\User -I .\Utils -I .\Common -I .\Modules -I .\FreeRTOS -I .\Task-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
 I (User\stm32f10x_it.h)(0x4D99A59E)

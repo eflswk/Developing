@@ -68,3 +68,4 @@
 .\objects\wifi.o: .\Task\Instruction_task.h
 .\objects\wifi.o: .\Task\wifi_reconnect_task.h
 .\objects\wifi.o: .\Task\feed_dog_task.h
+.\objects\wifi.o: .\Task\outline_task.h
